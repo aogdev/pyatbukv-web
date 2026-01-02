@@ -1,17 +1,29 @@
-import "./globals.css";
 import type { Metadata } from "next";
+import "./globals.css";
+
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
+import { LINKS } from "@/config/links";
 
 export const metadata: Metadata = {
-    title: "Пять Букв — русская игра в слова",
-    description:
-        "Пять Букв — премиальная русская игра в слова. Вход через Google и VK ID. Ежедневные слова и тематические категории.",
-    metadataBase: new URL("https://pyatbukv.ru"),
+    title: "Пять Букв",
+    description: "Словесная игра на русском языке.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="ru">
-        <body>{children}</body>
+        <body>
+        <div className="page">
+            <div className="shell">
+                <div className="container">
+                    <SiteHeader rustoreHref={LINKS.RUSTORE} boostyHref={LINKS.BOOSTY} />
+                    <main className="pageMain">{children}</main>
+                    <SiteFooter />
+                </div>
+            </div>
+        </div>
+        </body>
         </html>
     );
 }

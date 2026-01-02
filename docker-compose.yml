@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        # Можно оставить пустым или указать будущий API.
+        # Для статичного сайта не критично.
+        NEXT_PUBLIC_BACKEND_URL: "https://pyatbukv.ru/api"
+        BACKEND_URL: "https://pyatbukv.ru/api"
+    container_name: pyatbukv-web
+    restart: unless-stopped
+    environment:
+      NODE_ENV: "production"
+      NEXT_PUBLIC_BACKEND_URL: "https://pyatbukv.ru/api"
+      BACKEND_URL: "https://pyatbukv.ru/api"
+    ports:
+      - "127.0.0.1:3000:3000"

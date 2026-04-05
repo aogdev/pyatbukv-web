@@ -15,7 +15,7 @@ export default function RuStoreButton({
         <a
             className="storeBadgeBtn"
             href={href}
-            target="_blank"
+            target="https://www.rustore.ru/catalog/app/ru.pyatbukv.app"
             rel="noreferrer"
             aria-label={alt}
             title={title}

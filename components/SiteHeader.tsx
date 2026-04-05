@@ -5,13 +5,19 @@ import Link from "next/link";
 
 import BoostyButton from "@/components/buttons/BoostyButton";
 import RuStoreButton from "@/components/buttons/RuStoreButton";
+import GooglePlayButton from "@/components/buttons/GooglePlayButton";
 
 type Props = {
     rustoreHref?: string;
+    googlePlayHref?: string;
     boostyHref: string;
 };
 
-export default function SiteHeader({ rustoreHref = "#", boostyHref }: Props) {
+export default function SiteHeader({
+                                       rustoreHref = "#",
+                                       googlePlayHref = "#",
+                                       boostyHref,
+                                   }: Props) {
     return (
         <header className="topbar">
             <Link className="brand" href="/" aria-label="Пять Букв — на главную">
@@ -27,7 +33,8 @@ export default function SiteHeader({ rustoreHref = "#", boostyHref }: Props) {
 
             <nav className="navActions" aria-label="Действия">
                 <RuStoreButton href={rustoreHref} />
-                <BoostyButton href={boostyHref} />
+                <GooglePlayButton href={googlePlayHref} />
+                {/* <BoostyButton href={boostyHref} /> */}
             </nav>
         </header>
     );

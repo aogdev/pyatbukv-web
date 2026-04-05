@@ -14,6 +14,7 @@ export default function SiteFooter() {
                         <Link href="/privacy">Политика конфиденциальности</Link>
                         <Link href="/terms">Условия использования</Link>
                         <Link href="/delete-account">Управление аккаунтом</Link>
+                        <Link href="/requisites">Реквизиты</Link>
                     </nav>
                 </div>
             </div>

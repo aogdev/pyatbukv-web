@@ -17,7 +17,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div className="page">
             <div className="shell">
                 <div className="container">
-                    <SiteHeader rustoreHref={LINKS.RUSTORE} boostyHref={LINKS.BOOSTY} />
+                    <SiteHeader
+                        rustoreHref={LINKS.RUSTORE}
+                        googlePlayHref={LINKS.GOOGLE_PLAY}
+                        boostyHref={LINKS.BOOSTY}
+                    />
                     <main className="pageMain">{children}</main>
                     <SiteFooter />
                 </div>

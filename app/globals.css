@@ -1,3 +1,13 @@
+.legal h2 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.legal h3 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
 :root {
     /* === ЦВЕТА ИЗ ПРИЛОЖЕНИЯ === */
     --bg: #151625;
@@ -407,3 +417,4 @@ a.under { text-decoration: underline; text-underline-offset: 4px; color: var(--t
     text-decoration: underline;
     text-underline-offset: 4px;
 }
+
